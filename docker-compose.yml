@@ -6,7 +6,6 @@ services:
   revalidator:
     build: .
     restart: unless-stopped
-    container_name: portfolio-revalidator
     ports:
       - "4000:4000"
     env_file:
@@ -22,9 +21,9 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
+      - "traefik.http.routers.revalidator.service=revalidator"
       - "traefik.http.routers.revalidator.rule=Host(`revalidator.home.alexanderjalexander.com`)"
       - "traefik.http.routers.revalidator.entrypoints=websecure"
-      - "traefik.http.routers.revalidator.service=revalidator"
       - "traefik.http.routers.revalidator.tls=true"
       - "traefik.http.routers.revalidator.tls.certResolver=cloudflare"
       - "traefik.http.services.revalidator.loadbalancer.server.port=4000"
