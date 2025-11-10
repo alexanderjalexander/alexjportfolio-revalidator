@@ -40,7 +40,7 @@ cron.schedule('0 0 * * 0', async () => {
   }
 });
 
-server.get('/healthcheck', (_req:Request, res:Response) => {res.status(200);});
+server.get('/healthcheck', (_req:Request, res:Response) => {res.sendStatus(200);});
 server.use('{*splat}', (_req:Request, res:Response) => {
   res.sendStatus(404);
 });
