@@ -14,3 +14,11 @@ services:
       timeout: 10s
       retries: 3
       start_period: 20s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.revalidator.rule=Host(`revalidator.home.alexanderjalexander.com`)"
+      - "traefik.http.routers.revalidator.entrypoints=websecure"
+      - "traefik.http.routers.revalidator.service=revalidator"
+      - "traefik.http.routers.revalidator.tls=true"
+      - "traefik.http.routers.revalidator.tls.certResolver=cloudflare"
+      - "traefik.http.services.revalidator.loadbalancer.server.port=80"
