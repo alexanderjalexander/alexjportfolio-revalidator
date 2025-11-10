@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+        // Enable latest features
+        "lib": ["ESNext", "DOM"],
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleDetection": "force",
+        "jsx": "react-jsx",
+        "allowJs": true,
+
+        // Types compatibility
+        "types": [
+        "node"
+        ],
+
+        // Path Resolutions
+        // "baseUrl": ".",
+        // "paths": {
+        //   "@homelab/backend/*": ["packages/backend/src/*"],
+        //   "": [""]
+        // },
+
+        // Bundler mode
+        "moduleResolution": "bundler",
+        "verbatimModuleSyntax": true,
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true,
+
+        // Best practices
+        "strict": true,
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true,
+
+        // Some stricter flags (disabled by default)
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": ".dist",
+    },
+    "include": [
+        "index.ts",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "revalidator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx --env-file=./.env index.ts",
+    "dev": "npx tsx --watch --env-file=./.env index.ts"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "express": "^5.1.0",
+    "node-cron": "^4.2.1",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.3",
+    "@types/express-session": "^1.18.2",
+    "@types/node": "^24.7.0",
+    "@types/nodemailer": "^7.0.2",
+    "typescript": "^5.9.3"
+  }
+}
