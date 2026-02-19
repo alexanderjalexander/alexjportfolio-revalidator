@@ -4,6 +4,7 @@ networks:
 
 services:
   revalidator:
+    container_name: alexjportfolio-revalidator
     build: .
     restart: unless-stopped
     ports:
